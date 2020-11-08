@@ -1,10 +1,34 @@
+:root {
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --gray: #BABABA;
+    --off-white: #FAF8F7;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', system-ui;
+}
+
 body {
-    font-family: system-ui;
+    margin: 0;
+    padding: 0;
 }
-h1 {
-    color: teal;
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
-.your-name img {
-    max-width: 100%;
-    height: auto;
+
+ul {
+    list-style: none;
+    padding: 0;
 }
