@@ -288,9 +288,101 @@ header {
 }
 
 .plans__carousel {
-    overflow-x: scroll;
+    width: 100%;
+
 }
 
 .plans__container {
+    padding: 1.6rem;
+    width: 100%;
     display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+}
+
+.item {
+    scroll-snap-align: center;
+    padding: 0 0.8rem;
+    flex: 1 0 190px;
+    max-width: 230px;
+    background: white;
+    border-radius: 0.8rem;
+    margin: 0 0.9rem;
+    height: 247px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+    transition: box-shadow 0.3s ease;
+    &:hover {
+        box-shadow: 8px 10px 10px rgba(89, 73, 30, 0.16);
+    }
+
+    h4 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 18px;
+        color: black;
+        margin-top: 3.1rem;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.item__info {
+    font-weight: 500;
+    font-size: 1.2rem;
+    font-family: 'Inter', system-ui;
+    line-height: 15px;
+    text-align: center;
+    color: #757575;
+    margin: 0 0 1.6rem;
+}
+
+.item__price {
+    font-family: 'Inter', system-ui;
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 63px;
+    height: 56px;
+    margin-bottom: 1.6rem;
+    span {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 15px;
+    }
+}
+
+.item__cta {
+    padding: 1.4rem;
+    border: 2px solid var(--bitcoin-orange);
+    border-radius: 4px;
+    background: var(--off-white);
+    font-family: 'DM Sans', system-ui;
+    font-weight: 700;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    &:hover, &:focus {
+        background-color: var(--bitcoin-orange);
+        color: white;
+        outline: none;
+    }
+}
+
+.item__tag {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--bitcoin-orange);
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 15px;
+    font-family: 'Inter', system-ui;
+    padding: 0.8rem;
+    margin: 0;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import PlanItem from './PlanItem'
 
 const Plans = () => {
     return (
@@ -14,7 +15,15 @@ const Plans = () => {
 
             <div className="plans__carousel">
                 <div className="plans__container">
-                    
+                    <PlanItem title='Pago Anual' price='5'>
+                        *Plan básico para mantenerte informado
+                    </PlanItem>
+                    <PlanItem title='Pago Anual' price='49' best>
+                        *Ahorras $129 comparado al plan mensual.
+                    </PlanItem>
+                    <PlanItem title='Acceso de por vida' price='99'>
+                        *Ahorras $999+ comparado al plan anual.
+                    </PlanItem>
                 </div>
             </div>
         </section>
