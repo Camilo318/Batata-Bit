@@ -1,4 +1,5 @@
 import React from 'react'
+import Benefits from './Benefits'
 import Exchange from './Exchange'
 import Header from './Header'
 
@@ -8,6 +9,7 @@ const App = () => {
         <>
             <Header />
             <Exchange />
+            <Benefits />
         </>
     )
 }
