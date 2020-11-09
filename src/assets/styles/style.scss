@@ -103,7 +103,7 @@ header {
     margin-bottom: 40px;
 }
 
-.exchange__info {
+.exchange__header {
     text-align: center;
     min-width: 288px;
     width: 90%;
@@ -272,4 +272,25 @@ header {
         line-height: 26px;
         transform: translateY(12.5vh);
     }
+}
+
+.plans {
+    padding-top: 6.4rem;
+    background-color: var(--off-white);
+}
+
+.plans__header {
+    @extend .exchange__header;
+    margin-bottom: 2.6rem;
+    h2 {
+        margin-top: 0;
+    }
+}
+
+.plans__carousel {
+    overflow-x: scroll;
+}
+
+.plans__container {
+    display: flex;
 }

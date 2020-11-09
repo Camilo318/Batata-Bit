@@ -1,12 +1,11 @@
 import React from 'react'
-import moduleName from '../assets/img/Bitcoin.svg'
 
 const Exchange = () => {
     const date = new Date()
     return (
         <section className='exchange'>
             <div className='exchange__img'></div>
-            <div className='exchange__info'>
+            <div className='exchange__header'>
                 <h2>
                     Visualizamos todas las tasas de cambio.
                 </h2>
