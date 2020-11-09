@@ -252,3 +252,24 @@ header {
         margin: 0;
     }
 }
+
+
+.banner {
+    height: 70vh;
+    background-image: url(../img/bitcoinbaby2x.jpg);
+    background-size: cover;
+    background-position: center;
+
+    h2 {
+        font-weight: 700;
+        font-size: 2.4rem;
+        color: white;
+        min-width: 288px;
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+        line-height: 26px;
+        transform: translateY(12.5vh);
+    }
+}

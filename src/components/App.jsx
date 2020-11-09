@@ -1,4 +1,5 @@
 import React from 'react'
+import Banner from './Banner'
 import Benefits from './Benefits'
 import Exchange from './Exchange'
 import Header from './Header'
@@ -10,6 +11,7 @@ const App = () => {
             <Header />
             <Exchange />
             <Benefits />
+            <Banner />
         </>
     )
 }
