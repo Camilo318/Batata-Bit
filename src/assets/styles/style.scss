@@ -296,7 +296,7 @@ header {
     padding: 1.6rem;
     width: 100%;
     display: flex;
-    // justify-content: center;
+    justify-content: center;
     overflow-x: scroll;
     scroll-snap-type: x proximity;
 }
@@ -385,4 +385,31 @@ header {
     font-family: 'Inter', system-ui;
     padding: 0.8rem;
     margin: 0;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: var(--bitcoin-orange);
+}
+
+.footer__links {
+    margin-right: 5.2rem;
+    ul li a {
+        display: block;
+        color: white;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 18px;
+        margin-bottom: 0.8rem;
+    }
+}
+
+.footer__batata {
+    width: 100px;
+    img {
+        width: 100%;
+    }
 }
