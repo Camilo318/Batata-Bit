@@ -1,5 +1,4 @@
 import React from 'react'
-import Banner from './Banner'
 import Benefits from './Benefits'
 import Exchange from './Exchange'
 import Footer from './Footer'
@@ -13,7 +12,6 @@ const App = () => {
             <Header />
             <Exchange />
             <Benefits />
-            <Banner />
             <Plans />
             <Footer />
         </>
