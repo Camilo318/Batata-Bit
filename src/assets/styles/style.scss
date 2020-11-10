@@ -158,7 +158,7 @@ header {
 .exchange__grid {
     min-width: 200px;
     width: 80%;
-    max-width: 350px;
+    max-width: 450px;
     margin: 0 auto;
     background-color: white;
     border-radius: 8px;
@@ -168,10 +168,12 @@ header {
 }
 
 .grid-item {
-    height: 40px;
     font-size: 1.4rem;
     padding: 1rem 1.2rem;
     font-family: 'Inter', system-ui;
+    @media (min-width: 1024px) {
+        padding: 1.4rem 1.6rem;
+    }
     &.left {
         font-size: 1.6rem;
         font-weight: 500;
@@ -226,6 +228,9 @@ header {
     gap: 1.6rem;
     grid-template-columns: repeat(auto-fit, minmax(auto, 350px));
     justify-content: center;
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(2, 350px);
+    }
 }
 .card {
     background-color: #282623;
