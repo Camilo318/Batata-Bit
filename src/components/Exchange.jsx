@@ -4,7 +4,9 @@ const Exchange = () => {
     const date = new Date()
     return (
         <section className='exchange'>
-            <div className='exchange__img'></div>
+            <div className='exchange__img'>
+                <div className="img"></div>
+            </div>
             <div className='exchange__header'>
                 <h2>
                     Visualizamos todas las tasas de cambio.
