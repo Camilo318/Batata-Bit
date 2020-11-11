@@ -16,7 +16,13 @@ const Question = ({ children }) => {
     <div className="faq__body" onClick={() => setHidden(!hidden)}>
         <div className="faq__question">
             { children[0] }
-            <div className="arrow"></div>
+            <div className="arrow"
+            style={{
+                transition: 'transform 0.3s ease',
+                transform: hidden ? 'rotate(0)' : 'rotate(180deg)'
+            }}>
+
+            </div>
         </div>
         <ExpansionWrapper hidden={hidden}>
             { children[1] }
