@@ -1,10 +1,31 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+gsap.registerPlugin(ScrollTrigger)
 
 const Exchange = () => {
     const date = new Date()
+    const container = useRef(null)
+    useEffect(() => {
+        const bitcoinTL = gsap.timeline()
+        
+        bitcoinTL.from('.exchange__img .img', {
+            duration: 1.2,
+            skewX: 10,
+            scale: 0.1,
+            rotate: 90,
+            x: -300,
+            ease: 'power3',
+            scrollTriger: {
+                markers: true,
+                trigger: container.current,
+                start: 'top 10px',
+                toogleActions: 'play pause reverse pause'
+            }
+        })
+
+    }, [])
     return (
         <section className='exchange'>
-            <div className='exchange__img'>
+            <div className='exchange__img' ref={container}>
                 <div className="img"></div>
             </div>
             <div className='exchange__header'>
