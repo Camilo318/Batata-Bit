@@ -1,9 +1,37 @@
-import React from 'react'
+import React, {useRef, useEffect } from 'react'
 import PlanItem from './PlanItem'
 
 const Plans = () => {
+    const plan = useRef(null)
+    useEffect(() => {
+       const Tl = gsap.timeline({
+            scrollTrigger: {
+                // markers: true,
+                trigger: plan.current,
+                start: 'top 100px',
+                end : 'bottom center-=100px',
+                toggleActions: 'restart none none reverse'
+            }
+        })
+
+        Tl.from('.plans__header > *', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: 'power3',
+            stagger: 0.2
+        })
+        .from('.item', {
+            delay: -0.6,
+            opacity: 0,
+            x: 50,
+            ease: 'elastic.inOut',
+            duration: 1.2,
+            stagger: 0.2
+        })
+    }, [])
     return (
-        <section className='plans'>
+        <section className='plans' ref={plan}>
             <div className="plans__header">
                 <h2>
                     Escoge el plan que mejor se ajuste a ti.

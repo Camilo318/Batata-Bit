@@ -27,7 +27,7 @@ const Benefits = () => {
             stagger: 0.2
         })
         .from('.card', {
-            delay: -0.4,
+            delay: -0.6,
             opacity: 0,
             scale: 0.7,
             ease: 'elastic.inOut',
