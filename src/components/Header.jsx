@@ -19,6 +19,7 @@ const Header = () => {
             opacity: 0,
             scale: 0.2,
             duration: 1,
+            delay: 0.4,
             ease: 'elastic'
         })
     }, [])
@@ -34,7 +35,7 @@ const Header = () => {
                     Batabit te ayuda a navegar entre los diferentes precios y tendencias.
                 </p>
             </div>
-            <a href="" className='header__cta'>
+            <a href="#plans" className='header__cta'>
                 Conoce Nuestros Planes
             </a>
             

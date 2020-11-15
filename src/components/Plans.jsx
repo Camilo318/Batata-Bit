@@ -31,7 +31,7 @@ const Plans = () => {
         })
     }, [])
     return (
-        <section className='plans' ref={plan}>
+        <section className='plans' ref={plan} id='plans'>
             <div className="plans__header">
                 <h2>
                     Escoge el plan que mejor se ajuste a ti.
