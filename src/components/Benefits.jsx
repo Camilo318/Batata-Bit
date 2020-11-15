@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef, useEffect } from 'react'
 import Card from './Card'
 import clock from '../assets/icons/clock.svg'
 import eye from '../assets/icons/eye.svg'
@@ -7,8 +7,36 @@ import check from '../assets/icons/check-circle.svg'
 import batata from '../assets/icons/batata.svg'
 
 const Benefits = () => {
+    const benefits = useRef(null)
+    useEffect(() => {
+        const Tl = gsap.timeline({
+            scrollTrigger: {
+                // markers: true,
+                trigger: benefits.current,
+                start: 'top 100px',
+                end : 'bottom center-=100px',
+                toggleActions: 'restart none none reverse'
+            }
+        })
+
+        Tl.from('.benefits__header > *', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: 'power3',
+            stagger: 0.2
+        })
+        .from('.card', {
+            delay: -0.4,
+            opacity: 0,
+            scale: 0.7,
+            ease: 'elastic.inOut',
+            duration: 1.2,
+            stagger: 0.2,
+        })
+    }, [])
     return (
-        <section className='benefits'>
+        <section className='benefits' ref={benefits}>
             <img src={batata} alt="logo" className="benefits__batata"/>
             <div className="benefits__header">
                 <h2>
