@@ -13,6 +13,7 @@ const Exchange = () => {
                 start: 'top-=150px 100px',
                 end : 'bottom center-=100px',
                 toggleActions: 'restart none none reverse',
+                scrub: true
             }
         })
         
@@ -23,6 +24,15 @@ const Exchange = () => {
             rotate: 90,
             x: -300,
             ease: 'power3'
+        })
+        .from('.label', {
+            delay: -1.6,
+            opacity: 0,
+            duration: 2,
+            skewX: 10,
+            x: -100,
+            ease: 'elastic.inOut',
+            stagger: 1
         })
 
     }, [])
@@ -72,6 +82,9 @@ const Exchange = () => {
         <section className='exchange'>
             <div className='exchange__img' ref={container}>
                 <div className="img"></div>
+                <p className='label'>Que la incertidumbre en</p>
+                <p className='label'>materia de criptomonedas</p>
+                <p className='label'>sea cosa del pasado</p>
             </div>
             <div className='exchange__header'>
                 <h2>

@@ -135,6 +135,25 @@ header {
 
 }
 
+.label {
+    color: var(--soft-orange);
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 26px;
+    margin: 8rem 2rem;
+    @media (min-width: 1024px) {
+        font-size: 4rem;
+        line-height: 4.2px;
+    }
+}
+
+.label:nth-of-type(1) {
+    text-align: center;
+}
+.label:nth-of-type(2) {
+    text-align: right;
+}
+
 .exchange__header {
     text-align: center;
     min-width: 288px;
@@ -230,7 +249,13 @@ header {
         color: #757575;
     }
 }
-
+.exchange__tag {
+    font-family: 'Inter', system-ui;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 15px;
+    color: var(--warm-black);
+}
 .benefits {
     background-color: var(--warm-black);
     position: relative;
