@@ -7,6 +7,7 @@ const Header = () => {
     useEffect(() => {
         gsap.from(header.current, {
             opacity: 0,
+            autoAlpha: 0,
             y: 100,
             duration: 1,
             ease: 'power3',
@@ -14,10 +15,11 @@ const Header = () => {
         })
 
         gsap.from(logoImg.current, {
+            autoAlpha: 0,
             opacity: 0,
-            scale: 0.3,
-            duration: 1.2,
-            ease: 'power3'
+            scale: 0.2,
+            duration: 1,
+            ease: 'elastic'
         })
     }, [])
 

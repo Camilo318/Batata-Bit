@@ -32,25 +32,28 @@ const Question = ({ children }) => {
 
 const Faq = () => {
     const faqContainer = useRef(null)
-    const Tl = gsap.timeline({
-        scrollTrigger: {
-            markers: true,
-            trigger: '.faq',
-            start: 'top 100px',
-            end : 'bottom center-=100px',
-            toggleActions: 'restart none none reverse'
-        }
-    })
+
     useEffect(() => {
+        const Tl = gsap.timeline({
+            scrollTrigger: {
+                // markers: true,
+                trigger: faqContainer.current,
+                start: 'top-=100px 150px',
+                end : 'top center',
+                toggleActions: 'restart none none reverse'
+            }
+        })
+
         Tl.from('.faq__header > *', {
             opacity: 0,
             y: 30,
-            duration: 0.8,
-            ease: 'power3',
+            duration: 1,
+            ease: 'elastic.inOut',
             stagger: 0.2
         })
         .from('.faq__body', {
             opacity:0,
+            delay: -0.6,
             y: 20,
             duration: 1,
             ease: 'elastic.inOut',
