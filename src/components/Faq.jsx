@@ -36,7 +36,7 @@ const Faq = () => {
     useEffect(() => {
         const Tl = gsap.timeline({
             scrollTrigger: {
-                markers: true,
+                // markers: true,
                 trigger: faqContainer.current,
                 start: 'top-=150px 150px',
                 end : 'top center',
