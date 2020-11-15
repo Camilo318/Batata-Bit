@@ -15,6 +15,7 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './public/index.html',
+            favicon: './public/batata.svg',
             inject: true
         })
     ],

@@ -13,7 +13,7 @@ const Benefits = () => {
             scrollTrigger: {
                 // markers: true,
                 trigger: benefits.current,
-                start: 'top 100px',
+                start: 'top 200px',
                 end : 'bottom center-=100px',
                 toggleActions: 'restart none none reverse'
             }

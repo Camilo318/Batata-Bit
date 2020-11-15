@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-
+import React, { useState, useRef, useEffect } from 'react'
+gsap.registerPlugin(ScrollTrigger)
 
 const ExpansionWrapper = ({children, hidden}) => {
     return(
@@ -18,7 +18,7 @@ const Question = ({ children }) => {
             { children[0] }
             <div className="arrow"
             style={{
-                transition: 'transform 0.3s ease',
+                transition: 'transform 0.5s ease',
                 transform: hidden ? 'rotate(0)' : 'rotate(180deg)'
             }}>
 
@@ -31,9 +31,34 @@ const Question = ({ children }) => {
 }
 
 const Faq = () => {
-
+    const faqContainer = useRef(null)
+    const Tl = gsap.timeline({
+        scrollTrigger: {
+            markers: true,
+            trigger: '.faq',
+            start: 'top 100px',
+            end : 'bottom center-=100px',
+            toggleActions: 'restart none none reverse'
+        }
+    })
+    useEffect(() => {
+        Tl.from('.faq__header > *', {
+            opacity: 0,
+            y: 30,
+            duration: 0.8,
+            ease: 'power3',
+            stagger: 0.2
+        })
+        .from('.faq__body', {
+            opacity:0,
+            y: 20,
+            duration: 1,
+            ease: 'elastic.inOut',
+            stagger: 0.2,
+        })
+    }, [])
     return (
-        <section className='faq'>
+        <section className='faq' ref={faqContainer}>
             <div className="faq__header">
                 <h2>
                     ¿Preguntas? Aquí estamos para ti.
