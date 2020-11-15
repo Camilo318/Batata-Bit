@@ -5,21 +5,28 @@ const Exchange = () => {
     const date = new Date()
     const container = useRef(null)
     useEffect(() => {
-        const bitcoinTL = gsap.timeline()
-        
-        bitcoinTL.from('.exchange__img .img', {
-            duration: 1.2,
-            skewX: 10,
-            scale: 0.1,
-            rotate: 90,
-            x: -300,
-            ease: 'power3',
-            scrollTriger: {
+        const bitcoinTL = gsap.timeline({
+            scrollTrigger: {
                 markers: true,
                 trigger: container.current,
-                start: 'top 10px',
-                toogleActions: 'play pause reverse pause'
+                start: 'top-=150px 100px',
+                end : 'bottom center-=100px',
+                // scrub: true,
+                toggleActions: 'restart none none reverse',
+                onEnter: () => console.log('Enter'),
+                onEnterBack: () => console.log('Enter back'),
+                onLeave: () => console.log('Leave'),
+                onLeaveBack: () => console.log('Leave back')
             }
+        })
+        
+        bitcoinTL.from('.exchange__img .img', {
+            duration: 2,
+            skewX: 10,
+            scale: 0.2,
+            rotate: 90,
+            x: -300,
+            ease: 'power3'
         })
 
     }, [])
