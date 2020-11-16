@@ -38,7 +38,7 @@ const Faq = () => {
             scrollTrigger: {
                 // markers: true,
                 trigger: faqContainer.current,
-                start: 'top-=150px 150px',
+                start: 'top-=150px center',
                 end : 'top center',
                 toggleActions: 'restart none none reverse'
             }

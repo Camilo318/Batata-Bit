@@ -8,7 +8,7 @@ const Plans = () => {
             scrollTrigger: {
                 // markers: true,
                 trigger: plan.current,
-                start: 'top 100px',
+                start: 'top center',
                 end : 'bottom center-=100px',
                 toggleActions: 'restart none none reverse'
             }

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react'
-gsap.registerPlugin(ScrollTrigger)
 
 const Exchange = () => {
     const date = new Date()
@@ -52,7 +51,7 @@ const Exchange = () => {
             duration: 1,
             y: 30,
             ease: 'power3',
-            stagger: 0.2
+            stagger: 0.5
         })
         .from('.exchange__h3, .exchange__grid', {
             delay: -0.6,
@@ -71,10 +70,12 @@ const Exchange = () => {
             stagger: 0.2
         })
         .from('.exchange__tag', {
+            delay: -0.4,
             opacity: 0,
             duration: 0.5,
             scale: 0.3,
-            ease: 'bounce'
+            ease: 'bounce',
+            stagger: 0.2
         })
     }, [])
 
